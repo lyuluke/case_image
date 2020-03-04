@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-COPY apt.conf /etc/apt/
+#COPY apt.conf /etc/apt/
 COPY requirements.txt /install/requirements.txt
 WORKDIR /install
 RUN \
@@ -20,7 +20,7 @@ RUN \
 #==================================================
 # Python Packages
 #==================================================
-  pip3 install --proxy 3.20.128.5:88 --no-cache-dir -r requirements.txt && \
+  pip3 install --no-cache-dir -r requirements.txt && \
 #==================================================
 # apt clean
 #==================================================
